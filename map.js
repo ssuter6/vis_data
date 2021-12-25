@@ -7,18 +7,17 @@
 let myMap = L.map('map', {
 	
 	// Gestion des parametres
-	center: [46.33, 6.97],
-	minZoom: 10,
+	center: [46.7, 8.2],
+	minZoom: 1,
 	maxZoom: 18,
-	zoom: 13,  
+	zoom: 7.6,  
 });
 
 // Ajout de nos couches de base (layers)
-/*const mapboxTiles = L.tileLayer('https://api.mapbox.com/styles/v1/theogerritsen/cktvgvy4d294h18lp92dm804n/tiles/512/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoidGhlb2dlcnJpdHNlbiIsImEiOiJja3R2Zzkybzkwa25oMm5tcGp1MWY0enh1In0.n_ye_r9ELbLqxyWl-giSlA', {
-    attribution: '© <a href="https://www.mapbox.com/feedback/">Mapbox</a>',
-    tileSize: 512,
-       oomOffset: -1
-});*/
+
+const ESRI = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
+})
 
 const osmLayer = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
   	attribution: '&copy; OpenStreetMap contributors'
@@ -34,13 +33,15 @@ const googleTerrain = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z
   	subdomains:['mt0','mt1','mt2','mt3']
 });
 
-// Ajout de la couche pour le load de la page
-osmLayer.addTo(myMap);
 
-// Ajout des 4 couches dans une letiables pour le baseMaps controller
+
+// Ajout de la couche geo tile pour le load de la page
+ESRI.addTo(myMap);
+
+// Ajout des 3 couches dans une letiables pour le baseMaps controller
 const baseMaps = {
+    "ESRI": ESRI,
   	"OpenStreetMap": osmLayer,
-  	//"Mapbox": mapboxTiles,
   	"Satellite": googleSat,
   	"Terrain": googleTerrain
 };
@@ -53,3 +54,15 @@ L.control.layers(baseMaps, overlays).addTo(myMap);
 L.control.scale({
   position: 'bottomleft'
 }).addTo(myMap);
+
+
+//chargement des donéées
+// On ajoute la librairie JQuery
+// <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"</script>
+// On créer un fonction dans laquelle on charge notre fichier geojson 
+// On utilise ensuite la fonction pour afficher nos données sur la carte
+
+$.getJSON("canton.geojson",function(data){
+    // L.geoJson function is used to parse geojson file and load on to map
+    L.geoJson(data).addTo(myMap);
+    });
