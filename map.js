@@ -10,7 +10,7 @@ let myMap = L.map('map', {
 	center: [46.7, 8.2],
 	minZoom: 1,
 	maxZoom: 18,
-	zoom: 7.6,  
+	zoom: 7.5,  
 });
 
 // Ajout de nos couches de base (layers)
@@ -62,7 +62,19 @@ L.control.scale({
 // On créer un fonction dans laquelle on charge notre fichier geojson 
 // On utilise ensuite la fonction pour afficher nos données sur la carte
 
-$.getJSON("canton.geojson",function(data){
+var cant = $.getJSON("canton.geojson",function(data){
+    // add GeoJSON layer to the map once the file is loaded
+    var datalayer = L.geoJson(data ,{
+    onEachFeature: function(feature, featureLayer) {
+    featureLayer.bindPopup(feature.properties.NAME);
+    }
+    }).addTo(myMap);
+    });
+
+
+
+
+var ch = $.getJSON("ch.geojson",function(data){
     // L.geoJson function is used to parse geojson file and load on to map
     L.geoJson(data).addTo(myMap);
-    });
+        });
