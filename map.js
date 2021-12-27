@@ -34,21 +34,18 @@ const googleTerrain = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z
 });
 
 
-
 // Ajout de la couche geo tile pour le load de la page
 ESRI.addTo(myMap);
 
-// Ajout des 3 couches dans une letiables pour le baseMaps controller
-const baseMaps = {
-    "ESRI": ESRI,
-  	"OpenStreetMap": osmLayer,
-  	"Satellite": googleSat,
-  	"Terrain": googleTerrain
-};
-
 // Ajout du controller en haut a droite pour changer de couche
-const overlays = {};
-L.control.layers(baseMaps, overlays).addTo(myMap);
+const controlLayers = L.control.layers().addTo(myMap);
+
+// Ajout des couches de bases
+controlLayers.addBaseLayer(ESRI, 'ESRI');
+controlLayers.addBaseLayer(osmLayer, 'OpenStreeMap');
+controlLayers.addBaseLayer(googleSat, 'Satellite');
+controlLayers.addBaseLayer(googleTerrain, 'Terrain');
+
 
 // Ajout de l'échelle à la carte
 L.control.scale({
@@ -56,25 +53,27 @@ L.control.scale({
 }).addTo(myMap);
 
 
-//chargement des donéées
+//chargement des donéées geojson 
 // On ajoute la librairie JQuery
 // <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"</script>
 // On créer un fonction dans laquelle on charge notre fichier geojson 
 // On utilise ensuite la fonction pour afficher nos données sur la carte
 
-var cant = $.getJSON("canton.geojson",function(data){
-    // add GeoJSON layer to the map once the file is loaded
-    var datalayer = L.geoJson(data ,{
-    onEachFeature: function(feature, featureLayer) {
-    featureLayer.bindPopup(feature.properties.NAME);
-    }
-    }).addTo(myMap);
-    });
+// Limites Suisses
+const Suisse = $.getJSON("ch.geojson", function (data) {
+    var limite_suisse = L.geoJSON(data).addTo(myMap);
+		controlLayers.addOverlay(limite_suisse, 'Limite Suisse');
+});
+
+// Limites Cantonale
+const cant = $.getJSON("canton.geojson", function (data) {
+    var limite_canton = L.geoJSON(data,
+        {
+            onEachFeature: function onEachFeature(feature, layer) {
+                layer.bindPopup('<strong>' + feature.properties.NAME ); // On affiche le nom du canton lorsqu'on click dessus
+        }
+        }).addTo(myMap);
+		controlLayers.addOverlay(limite_canton, 'Limite cantonale');
+});
 
 
-
-
-var ch = $.getJSON("ch.geojson",function(data){
-    // L.geoJson function is used to parse geojson file and load on to map
-    L.geoJson(data).addTo(myMap);
-        });
