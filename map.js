@@ -53,9 +53,10 @@ L.control.scale({
 }).addTo(myMap);
 
 
+/////////////////////////////////////////////////////////////////////////////////////
 //chargement des donéées geojson à l'aide de JQuery
-// <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"</script>
 // Chaque gichier geojson peut être chargé à la carte en appuyant sur le boutton voulu
+//////////////////////////////////////////////////////////////////////////////////////
 
 // Suisse
 const button_ch = $("#Limite_CH").click(function(){

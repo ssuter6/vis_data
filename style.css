@@ -26,11 +26,11 @@ h1 {
 }
 
 .map_container{
-    margin-top: 15px;
+    margin-top: 8px;
     position: absolute;
     background-color: lightgray;
     width: 890px;
-    height: 500px;
+    height: 520px;
     margin-left: 620px;
 }
 
@@ -42,11 +42,97 @@ h1 {
 
 .info{
     position: absolute;
-    background-color: lightgray;
-    margin-top: 530px;
+    background-color: #fff;
+    margin-top: 545px;
     margin-left: 620px;
     width: 890px;
     height: 65px;
+    text-align: center;
 }
 
 
+/* Styling the button*/
+
+#Limite_CH {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-right: 2px;
+    cursor: pointer;
+  }
+
+  #Limite_CH:hover {
+    background-color: #0f4910; /* Green */
+    color: white;
+    cursor: pointer;
+  }
+
+  #Limite_cantonales {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    margin-right: 2px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  #Limite_cantonales:hover {
+    background-color: #0f4910; /* Green */
+    color: white;
+    cursor: pointer;
+  }
+
+  #Limite_districts {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    margin-right: 2px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  #Limite_districts:hover {
+    background-color: #0f4910; /* Green */
+    color: white;
+    cursor: pointer;
+  }
+
+  #Limite_communales {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    margin-right: 2px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  #Limite_communales:hover {
+    background-color: #0f4910; /* Green */
+    color: white;
+    cursor: pointer;
+  }
+
+  .colorClass{
+    color: purple;
+  }
