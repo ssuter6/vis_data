@@ -16,7 +16,7 @@ let myMap = L.map('map', {
 // Ajout de nos couches de base (layers)
 
 const ESRI = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
-	attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
+	attribution: 'Tiles &copy; Esri and the GIS User Community'
 })
 
 const osmLayer = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
@@ -40,7 +40,7 @@ ESRI.addTo(myMap);
 // Ajout du controller en haut a droite pour changer de couche
 const controlLayers = L.control.layers().addTo(myMap);
 
-// Ajout des couches de bases
+// Ajout des couches de bases au controller
 controlLayers.addBaseLayer(ESRI, 'ESRI');
 controlLayers.addBaseLayer(osmLayer, 'OpenStreeMap');
 controlLayers.addBaseLayer(googleSat, 'Satellite');
@@ -53,27 +53,63 @@ L.control.scale({
 }).addTo(myMap);
 
 
-//chargement des donéées geojson 
-// On ajoute la librairie JQuery
+//chargement des donéées geojson à l'aide de JQuery
 // <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"</script>
-// On créer un fonction dans laquelle on charge notre fichier geojson 
-// On utilise ensuite la fonction pour afficher nos données sur la carte
+// Chaque gichier geojson peut être chargé à la carte en appuyant sur le boutton voulu
 
-// Limites Suisses
-const Suisse = $.getJSON("ch.geojson", function (data) {
-    var limite_suisse = L.geoJSON(data).addTo(myMap);
-		controlLayers.addOverlay(limite_suisse, 'Limite Suisse');
-});
+// Suisse
+const button_ch = $("#Limite_CH").click(function(){
+	$.getJSON("ch.geojson", function (data) {
+		var limite_ch = L.geoJSON(data,
+			{
+				onEachFeature: function onEachFeature(feature, layer) {
+					layer.bindPopup('<strong>' + feature.properties.NAME ); // On affiche le nom du canton lorsqu'on click dessus
+			}
+			}).addTo(myMap);
+			
+	});
+})
 
-// Limites Cantonale
-const cant = $.getJSON("canton.geojson", function (data) {
-    var limite_canton = L.geoJSON(data,
-        {
-            onEachFeature: function onEachFeature(feature, layer) {
-                layer.bindPopup('<strong>' + feature.properties.NAME ); // On affiche le nom du canton lorsqu'on click dessus
-        }
-        }).addTo(myMap);
-		controlLayers.addOverlay(limite_canton, 'Limite cantonale');
-});
+// Cantons
+const button_canton = $("#Limite_cantonales").click(function(){
+	$.getJSON("canton.geojson", function (data) {
+		var limite_canton = L.geoJSON(data,
+			{
+				onEachFeature: function onEachFeature(feature, layer) {
+					layer.bindPopup('<strong>' + feature.properties.NAME ); 
+			}
+			}).addTo(myMap);
+			
+	});
+})
+
+// Districts
+const button_districts = $("#Limite_districts").click(function(){
+	$.getJSON("districts.geojson", function (data) {
+		var limite_districts= L.geoJSON(data,
+			{
+				onEachFeature: function onEachFeature(feature, layer) {
+					layer.bindPopup('<strong>' + feature.properties.NAME ); 
+			}
+			}).addTo(myMap);
+			
+	});
+})
+
+// Communes
+const button_communes = $("#Limite_communales").click(function(){
+	$.getJSON("communes_p.geojson", function (data) {
+		var limite_communes = L.geoJSON(data,
+			{
+				onEachFeature: function onEachFeature(feature, layer) {
+					layer.bindPopup('<strong>' + feature.properties.NAME );
+			}
+			}).addTo(myMap);
+			
+	});
+})
+
+
+
 
 
