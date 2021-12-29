@@ -15,15 +15,23 @@
                 <h1 id="h1">Les limites administratives de la Suisse</h1>
                 <h3 id="h3">Unveristé de Lausanne (FGSE) -- Projet de visualisation de données -- Steven Suter</h3>
             </div>
+
             <div id="container" class="container" >
+
             <div id="left" class="left">
                 <p style="color: blanchedalmond;">Pour obtenir des informations sur une des zones addministratives,
-                                                    selectionnez une des quatres limites définient en-dessous de la carte
-                                                    puis clickez sur les éléments qui apparaissent sur cette dernière.</p>
+                    selectionnez une des quatres limites définient en-dessous de la carte
+                    puis clickez sur les éléments qui apparaissent sur cette dernière.</p>
+
+                <div id="inside_left1"></div>
+                <div id="inside_left2"></div>
+                <div id="inside_left3"></div>
             </div>
+
             <div id="map_container" class="map_container">
                 <div id="map" class="map"></div>
             </div>
+
             <div id="info" class="info">
                 <button id="Limite_CH" class="disable">Frontières nationales</button>
                 <button id="Limite_cantonales">Frontières cantonales</button>
@@ -31,6 +39,7 @@
                 <button id="Limite_communales">Frontières communales</button>
             </div>
         </div>
+
         <script src="map.js"></script>
         <script src="canton.geojson" type="text/javascript"></script>
         <script src="ch.geojson" type="text/javascript"></script>

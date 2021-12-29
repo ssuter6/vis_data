@@ -62,128 +62,156 @@ L.control.scale({
 //////////////////////////////////////////////////////////////////////////////////////
 
 /// Suisse ///
-var style_ch = {
+const style_ch = {
 	"color": "#800000",
 	"weight": 3,
 	"fillColor": 'rgba(255, 255, 255, 0.5)',
    };
 
-const button_ch = $("#Limite_CH").click(function(){
-	$(this).prop('disabled', true);
-	$.getJSON("ch.geojson", function (data) {
-		var limite_ch = L.geoJSON(data,{
-			style: style_ch,
-				onEachFeature: function onEachFeature(feature, layer) {
-					layer.on('mouseover', function () {
-					  this.setStyle({
+const button_ch = $("#Limite_CH").click(function(){								// On va chercher notre boutton et on ouvre une fonction lorsqu'on click dessus
+
+	$.getJSON("ch.geojson", function (data) {									// la fonction va chercher notre données geojson des limites ch et applique une fonction sur ces données
+		
+		L.geoJSON(data,{ style: style_ch,  										// On créer une variable qui contient notre nouvelles couche issuent des données geojson
+			onEachFeature: function onEachFeature(feature, layer) { 			// On applique un mouseover au dessus des différents polygone de chaque couche
+
+				layer.on('click', function(e){
+					$("#left").html(feature.properties.NAME); 	// On affiche les infos sur l'élément selectionné.
+					$("#left").html(feature.properties.EINWOHNERZ); 
+					$("#left").html(feature.properties.Shape_Area); 				
+				});
+				layer.on('mouseover', function () {
+					this.setStyle({
 						'fillColor': '#0000ff'
-					  });
 					});
-					layer.on('mouseout', function () {
+				});
+				layer.on('mouseout', function () {
 					  this.setStyle({
 						'fillColor': 'rgba(255, 255, 255, 0.5)'
-					  });
 					});
-					layer.bindPopup('<strong>' + feature.properties.NAME );
-				}
-			}).addTo(myMap);
+				});
+				layer.bindPopup('<strong>' + feature.properties.NAME ); 	// Lorsqu'on click sur le polygon le nom de ce dernier s'affiche
+			}
+		}).addTo(myMap);
+
 	});
-})
+});
 
 /// Cantons ///
-var style_cantons = {
+const style_cantons = {
 	"color": "#000075",
-	"weight": 2,
+	"weight": 3,
 	"opacity": 0.7,
 	"fillColor": 'rgba(255, 255, 255, 0.5)',
    };
 
 const button_canton = $("#Limite_cantonales").click(function(){
-	$(this).prop('disabled', true);
-	$.getJSON("canton.geojson", function (data) {
-		var limite_canton = L.geoJSON(data,{
-			style: style_cantons,
-				onEachFeature: function onEachFeature(feature, layer) {
-					layer.bindPopup('<strong>' + feature.properties.NAME );
 
-					layer.on('mouseover', function () {
-					  this.setStyle({
-						'fillColor': '#0000ff'
-					  });
-					});
-					layer.on('mouseout', function () {
-						this.setStyle({
-						  'fillColor': 'rgba(255, 255, 255, 0.5)'
-						});
-					  });
-				}
-			}).addTo(myMap);		
+	$.getJSON("canton.geojson", function (data) {
+
+		L.geoJSON(data,{style: style_cantons,
+			onEachFeature: function onEachFeature(feature, layer) {
+				layer.on('click', function(e){
+					$(".left").html(feature.properties.NAME);
+				});
+
+		layer.on('mouseover', function () {
+			this.setStyle({
+				'fillColor': '#0000ff'
+			});
+		});
+
+		layer.on('mouseout', function () {
+			this.setStyle({
+				'fillColor': 'rgba(255, 255, 255, 0.5)'
+			});
+		});
+
+		layer.bindPopup('<strong>' + feature.properties.NAME );
+
+		}
+		}).addTo(myMap);
+				
 	});
-})
+});
 
 
 /// Districts//
-var style_districts = {
+const style_districts = {
 	"color": "#e6194B",
-	"weight": 1,
+	"weight": 2,
 	"opacity": 1,
 	"fillColor": 'rgba(255, 255, 255, 0.5)',
    };
 
 const button_districts = $("#Limite_districts").click(function(){
-	$(this).prop('disabled', true);
+	
 	$.getJSON("districts.geojson",  function (data) {
-		var limite_districts= L.geoJSON(data,{
-			style: style_districts,
+
+		L.geoJSON(data, {style: style_districts,
 				onEachFeature: function onEachFeature(feature, layer) {
+					layer.on('click', function(e){
+						$(".left").html(feature.properties.NAME);
+					});
+
 					layer.on('mouseover', function () {
 					  this.setStyle({
 						'fillColor': '#0000ff'
 					  });
 					});
+
 					layer.on('mouseout', function () {
 					  this.setStyle({
 						'fillColor': 'rgba(255, 255, 255, 0.5)'
 					  });
 					});
+
 					layer.bindPopup('<strong>' + feature.properties.NAME );
+				
 				}
-			}).addTo(myMap);
-			
+
+		}).addTo(myMap);
+
 	});
-})
+});
 
 
 /// Communes ///
 var style_communes = {
-	"color": "#ffe119",
+	"color": "#000000",
 	"weight": 0.6,
 	"opacity": 1,
 	"fillColor": 'rgba(255, 255, 255, 0.5)',
    };
 
 const button_communes = $("#Limite_communales").click(function(){
-	$(this).prop('disabled', true);
+
 	$.getJSON("communes_p.geojson", function (data) {
-		var limite_communes = L.geoJSON(data,{
-			style: style_communes,
+		L.geoJSON(data, {style: style_communes,
+
 				onEachFeature: function onEachFeature(feature, layer) {
+					layer.on('click', function(e){
+						$(".left").html(feature.properties.NAME);
+					});
+
 					layer.on('mouseover', function () {
 					  this.setStyle({
 						'fillColor': '#0000ff'
 					  });
 					});
+
 					layer.on('mouseout', function () {
 					  this.setStyle({
 						'fillColor': 'rgba(255, 255, 255, 0.5)'
 					  });
 					});
+
 					layer.bindPopup('<strong>' + feature.properties.NAME );
 				}
-			}).addTo(myMap);
+		}).addTo(myMap);
 			
 	});
-})
+});
 
 
 
