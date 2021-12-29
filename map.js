@@ -54,41 +54,62 @@ L.control.scale({
 
 
 /////////////////////////////////////////////////////////////////////////////////////
-//chargement des donéées geojson à l'aide de JQuery
-// Chaque gichier geojson peut être chargé à la carte en appuyant sur le boutton voulu
+//	Chargement des donéées geojson à l'aide de JQuery
+// 	Chaque gichier geojson peut être chargé à la carte en appuyant sur le boutton voulu
 //////////////////////////////////////////////////////////////////////////////////////
 
 // Suisse
+var style_ch = {
+	"color": "#42d4f4",
+	"fillColor": 'white',
+	"weight": 4,
+	"opacity": 0.65
+   };
+
 const button_ch = $("#Limite_CH").click(function(){
+	$(this).prop('disabled', true);
 	$.getJSON("ch.geojson", function (data) {
-		var limite_ch = L.geoJSON(data,
-			{
+		var limite_ch = L.geoJSON(data,{
+			style: style_ch,
 				onEachFeature: function onEachFeature(feature, layer) {
 					layer.bindPopup('<strong>' + feature.properties.NAME ); // On affiche le nom du canton lorsqu'on click dessus
 			}
 			}).addTo(myMap);
-			
 	});
 })
 
 // Cantons
+var style_cantons = {
+	"color": "#4363d8",
+	"weight": 3,
+	"opacity": 0.25,
+   };
+
 const button_canton = $("#Limite_cantonales").click(function(){
+	$(this).prop('disabled', true);
 	$.getJSON("canton.geojson", function (data) {
-		var limite_canton = L.geoJSON(data,
-			{
+		var limite_canton = L.geoJSON(data,{
+			style: style_cantons,
 				onEachFeature: function onEachFeature(feature, layer) {
 					layer.bindPopup('<strong>' + feature.properties.NAME ); 
 			}
-			}).addTo(myMap);
-			
+			}).addTo(myMap);		
 	});
 })
+
 
 // Districts
+var style_districts = {
+	"color": "#911eb4",
+	"weight": 2,
+	"opacity": 0.45
+   };
+
 const button_districts = $("#Limite_districts").click(function(){
-	$.getJSON("districts.geojson", function (data) {
-		var limite_districts= L.geoJSON(data,
-			{
+	$(this).prop('disabled', true);
+	$.getJSON("districts.geojson",  function (data) {
+		var limite_districts= L.geoJSON(data,{
+			style: style_districts,
 				onEachFeature: function onEachFeature(feature, layer) {
 					layer.bindPopup('<strong>' + feature.properties.NAME ); 
 			}
@@ -97,11 +118,19 @@ const button_districts = $("#Limite_districts").click(function(){
 	});
 })
 
+
 // Communes
+var style_communes = {
+	"color": "#f032e6",
+	"weight": 0.6,
+	"opacity": 0.55
+   };
+
 const button_communes = $("#Limite_communales").click(function(){
+	$(this).prop('disabled', true);
 	$.getJSON("communes_p.geojson", function (data) {
-		var limite_communes = L.geoJSON(data,
-			{
+		var limite_communes = L.geoJSON(data,{
+			style: style_communes,
 				onEachFeature: function onEachFeature(feature, layer) {
 					layer.bindPopup('<strong>' + feature.properties.NAME );
 			}
