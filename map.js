@@ -7,9 +7,9 @@
 let myMap = L.map('map', {
 	
 	// Gestion des parametres
-	center: [46.7, 8.2],
+	center: [46.83, 8.2],
 	minZoom: 1,
-	maxZoom: 18,
+	maxZoom: 10.3,
 	zoom: 7.5,  
 });
 
@@ -28,14 +28,17 @@ const googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}
   	subdomains:['mt0','mt1','mt2','mt3']
 });
 
-const googleTerrain = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}',{
-	tileSize: 256,
-  	subdomains:['mt0','mt1','mt2','mt3']
+const terrain = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain-background/{z}/{x}/{y}{r}.{ext}', {
+	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+	subdomains: 'abcd',
+	minZoom: 0,
+	maxZoom: 18,
+	ext: 'png'
 });
 
 
 // Ajout de la couche geo tile pour le load de la page
-ESRI.addTo(myMap);
+terrain.addTo(myMap);
 
 // Ajout du controller en haut a droite pour changer de couche
 const controlLayers = L.control.layers().addTo(myMap);
@@ -44,7 +47,7 @@ const controlLayers = L.control.layers().addTo(myMap);
 controlLayers.addBaseLayer(ESRI, 'ESRI');
 controlLayers.addBaseLayer(osmLayer, 'OpenStreeMap');
 controlLayers.addBaseLayer(googleSat, 'Satellite');
-controlLayers.addBaseLayer(googleTerrain, 'Terrain');
+controlLayers.addBaseLayer(terrain, 'Terrain');
 
 
 // Ajout de l'échelle à la carte
@@ -58,12 +61,12 @@ L.control.scale({
 // 	Chaque gichier geojson peut être chargé à la carte en appuyant sur le boutton voulu
 //////////////////////////////////////////////////////////////////////////////////////
 
-// Suisse
+/// Suisse ///
 var style_ch = {
-	"color": "#42d4f4",
-	"fillColor": 'white',
-	"weight": 4,
-	"opacity": 0.65
+	"color": "#800000",
+	"fillColor": 'none',
+	"weight": 3,
+	"fillColor": 'tranparent',
    };
 
 const button_ch = $("#Limite_CH").click(function(){
@@ -78,11 +81,12 @@ const button_ch = $("#Limite_CH").click(function(){
 	});
 })
 
-// Cantons
+/// Cantons ///
 var style_cantons = {
-	"color": "#4363d8",
-	"weight": 3,
-	"opacity": 0.25,
+	"color": "#000075",
+	"weight": 2,
+	"opacity": 0.7,
+	"fillColor": 'tranparent',
    };
 
 const button_canton = $("#Limite_cantonales").click(function(){
@@ -98,11 +102,12 @@ const button_canton = $("#Limite_cantonales").click(function(){
 })
 
 
-// Districts
+/// Districts//
 var style_districts = {
-	"color": "#911eb4",
-	"weight": 2,
-	"opacity": 0.45
+	"color": "#e6194B",
+	"weight": 1,
+	"opacity": 1,
+	"fillColor": 'tranparent',
    };
 
 const button_districts = $("#Limite_districts").click(function(){
@@ -119,11 +124,12 @@ const button_districts = $("#Limite_districts").click(function(){
 })
 
 
-// Communes
+/// Communes ///
 var style_communes = {
-	"color": "#f032e6",
+	"color": "#ffe119",
 	"weight": 0.6,
-	"opacity": 0.55
+	"opacity": 1,
+	"fillColor": 'tranparent',
    };
 
 const button_communes = $("#Limite_communales").click(function(){
