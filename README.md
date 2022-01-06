@@ -1,5 +1,6 @@
-                                                                  # Projet de visualisation de données
- ##Introduction                                                                 
+# Projet de visualisation de données
+
+##Introduction                                                                 
 
 Ce project de visualisation de données prend place dans le cadre du cours de "Visualisation de données" donné par le Porfesseur Mr. Isaac Pante à l'Université de Lausanne.
 L'idée de ce projet est de réaliser une visualisation web basé sur des données géographiques, qui permettent de visualiser et d'interagir avec les différents type de limites
