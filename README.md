@@ -23,11 +23,16 @@ Comme mentionné ci-dessus, ce travail à entre autre fait recour à la biblioth
 
 Une fois que notre fond de carte a été créer, nous pouvons désormais ajouter nos éléments d'habillage à la carte. Pour ce faire, nous avons du procéder par plusieurs étapes. Dans un premier temps, il a fallut trouver les données nécessaire à la création de nos éléments, à savoir les différentes limites administratives de la Suisse. Pour ce faire, nous avons décidé de travailler à partir d'un jeu de donnée gratuit rendu disponible par _Swisstopo_. Il s'agit là du jeu de donnée [swissBOUNDARIES3D](https://www.swisstopo.admin.ch/fr/geodata/landscape/boundaries3d.html). A savoir un jeu de données concernant des informations liées au territoire de la Suisse. 
 Ce jeu de donnée contient dès lors des fichier Shapefile correspondant au différentes limites administrative de la Suisse. En transformant ces fichiers Shapefile en fichier Geojson au travers d'un logiciel SIG (ici [QGIS](https://www.qgis.org/fr/site/)), il est ensuite possible d'exploiter ces données dans notre pojet.
+![Capture](https://user-images.githubusercontent.com/81638170/148370274-8191f090-0941-41e3-8424-cbe41a640f4b.JPG)
 
-### Interface du projet 
+
+
+
+## Création de l'interface du projet 
 
 Dès lors que les éléments de fonds de carte et d'habillages ont été définis. Nous avons créer un interface qui permet d'interagir avec la carte et les données Geojson que nous avons créer. Cet interface se décompose en plusieurs parties. A savoir, une carte interactive qui permet de visualiser nos limites administratives de la Suisse, une partie permettant à l'utilisateur de selectionner quelles limites ce dernier souhaite visualiser. Et finalement, une partie permettant d'apporter des informations sur l'interactivité du projet et sur les éléments que l'utilisateur à choisi de selectionner.
 ![projet_vis_data](https://user-images.githubusercontent.com/81638170/148364214-4c2a3c3d-bceb-47ba-adf3-a30cdc6fbd8f.JPG)
+
 
 ### Interactivité 
 
