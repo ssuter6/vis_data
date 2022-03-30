@@ -19,14 +19,24 @@ const ESRI = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/Wo
 	attribution: 'Tiles &copy; Esri and the GIS User Community'
 })
 
+
 const osmLayer = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
   	attribution: '&copy; OpenStreetMap contributors'
 });
+
+
 
 const googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
   	tileSize: 256,
   	subdomains:['mt0','mt1','mt2','mt3']
 });
+
+
+const test = L.tileLayer('file:///C%3A/Users/Steven/Desktop/Master/sentinel_2/04_avril_2021/{z}/{x}/{y}.png', {
+  	attribution: '&copy; OpenStreetMap contributors',
+	  tms: false,
+});
+
 
 const terrain = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain-background/{z}/{x}/{y}{r}.{ext}', {
 	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
@@ -35,6 +45,8 @@ const terrain = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain-b
 	maxZoom: 18,
 	ext: 'png'
 });
+
+var swissLayer = L.tileLayer.swiss()
 
 
 // Ajout de la couche geo tile pour le load de la page
@@ -48,6 +60,7 @@ controlLayers.addBaseLayer(ESRI, 'ESRI');
 controlLayers.addBaseLayer(osmLayer, 'OpenStreeMap');
 controlLayers.addBaseLayer(googleSat, 'Satellite');
 controlLayers.addBaseLayer(terrain, 'Terrain');
+controlLayers.addBaseLayer(test, 'Test');
 
 
 // Ajout de l'échelle à la carte
@@ -64,7 +77,7 @@ L.control.scale({
 /// Suisse ///
 const style_ch = {
 	"color": "#800000",
-	"weight": 3,
+	"weight": 4,
 	"fillColor": 'rgba(255, 255, 255, 0.5)',
    };
 
@@ -76,9 +89,7 @@ const button_ch = $("#Limite_CH").click(function(){								// On va chercher not
 			onEachFeature: function onEachFeature(feature, layer) { 			// On applique un mouseover au dessus des différents polygone de chaque couche
 
 				layer.on('click', function(e){
-					$("#left").html(feature.properties.NAME); 	// On affiche les infos sur l'élément selectionné.
-					$("#left").html(feature.properties.EINWOHNERZ); 
-					$("#left").html(feature.properties.Shape_Area); 				
+					$("#Nom").html(feature.properties.NAME); 	// On affiche les infos sur l'élément selectionné. 				
 				});
 				layer.on('mouseover', function () {
 					this.setStyle({
@@ -152,6 +163,7 @@ const button_districts = $("#Limite_districts").click(function(){
 				onEachFeature: function onEachFeature(feature, layer) {
 					layer.on('click', function(e){
 						$(".left").html(feature.properties.NAME);
+						$(".left").html('Nombre total habitants'+' '+'='+' '+ feature.properties.EINWOHNERZ);
 					});
 
 					layer.on('mouseover', function () {

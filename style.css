@@ -31,15 +31,17 @@ h3 {
 }
 
 .left{
-    margin-left: 925px;
+    margin-left: 920px;
     position: absolute;
     background-color: rgb(171, 171, 171);
-    width: 570px;
+    width: 575px;
     height: 600px;
     text-align: center;
     margin-top: 9px;
     border-radius: 5px;
 }
+
+
 
 p{
   margin: 10px;
@@ -154,3 +156,13 @@ p{
     cursor: pointer;
   }
 
+  #Nom {
+    text-align: left;
+  position: aboslute;   
+
+  }
+
+  #Nbr_habitant{
+    
+    position: absolute;
+  }
