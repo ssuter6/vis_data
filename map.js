@@ -118,13 +118,18 @@ const style_cantons = {
 
 const button_canton = $("#Limite_cantonales").click(function(){
 
-	$.getJSON("canton.geojson", function (data) {
+	$.getJSON("cantons_votation.geojson", function (data) {
 
 		L.geoJSON(data,{style: style_cantons,
 			onEachFeature: function onEachFeature(feature, layer) {
+
 				layer.on('click', function(e){
-					$(".left").html(feature.properties.NAME);
-				});
+					$(".parent1").html('Canton'+' '+':'+' '+ feature.properties.name)});
+
+				layer.on('click', function(a){
+						$(".parent2").html('Nombre total habitants'+' '+':'+' '+ feature.properties.cantons_Bu)});
+			
+			
 
 		layer.on('mouseover', function () {
 			this.setStyle({
@@ -138,7 +143,7 @@ const button_canton = $("#Limite_cantonales").click(function(){
 			});
 		});
 
-		layer.bindPopup('<strong>' + feature.properties.NAME );
+		layer.bindPopup('<strong>' + feature.properties.name);
 
 		}
 		}).addTo(myMap);
@@ -162,7 +167,7 @@ const button_districts = $("#Limite_districts").click(function(){
 		L.geoJSON(data, {style: style_districts,
 				onEachFeature: function onEachFeature(feature, layer) {
 					layer.on('click', function(e){
-						$(".left").html(feature.properties.NAME);
+						$(".name").html(feature.properties.NAME);
 						$(".left").html('Nombre total habitants'+' '+'='+' '+ feature.properties.EINWOHNERZ);
 					});
 
