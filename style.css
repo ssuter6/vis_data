@@ -169,23 +169,26 @@ p{
 
 .parent1{
   position: absolute;
+  padding-top: 5px;
   background-color: rgb(171, 171, 171);
-  width: 575px;
-  height: 25px;
-  text-align:center;
+  width: 555px;
+  height: 35px;
+  text-align:left;
   margin-top: 2px;
+  font-size: x-large;
   border-radius: 5px;
   border:5px;
 }
 
 .parent2{
   position: relative;
+  padding-top: 20px;
   background-color: rgb(171, 171, 171);
-  width: 575px;
-  height: 25px;
-  text-align:center;
-  margin-top: 30px;
-  border-radius: 5px;
+  width: 555px;
+  height: 35px;
+  font-size: x-large;
+  text-align:left;
+  margin-top: 35px;
   border:5px;
 }
 
