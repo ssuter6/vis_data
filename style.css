@@ -164,44 +164,49 @@ p{
     text-align: center;
     margin-top: 9px;
     border-radius: 5px;
+    color: blanchedalmond;
     border:5px;
 }
 
 .parent1{
   position: absolute;
-  padding-top: 5px;
+  padding-top: 10px;
   background-color: rgb(171, 171, 171);
   width: 555px;
-  height: 35px;
+  height: 30px;
   text-align:left;
+  color: blanchedalmond;
   margin-top: 2px;
-  font-size: x-large;
+  font-size: large;
   border-radius: 5px;
   border:5px;
 }
 
 .parent2{
   position: relative;
-  padding-top: 20px;
+  color: blanchedalmond;  
+  padding-top: 25px;
   background-color: rgb(171, 171, 171);
   width: 555px;
   height: 35px;
-  font-size: x-large;
+  font-size: large;
   text-align:left;
-  margin-top: 35px;
+  margin-top: 30px;
   border:5px;
 }
 
 .parent3{
-  position: absolute;
+  position: relative;
+  color: blanchedalmond;  
+  padding-top: 10px;
   background-color: rgb(171, 171, 171);
-  width: 575px;
-  height: 25px;
-  text-align:center;
-  margin-top: 30px;
-  border-radius: 5px;
+  width: 555px;
+  height: 45px;
+  font-size: large;
+  text-align:left;
+  margin-top: -5px;
   border:5px;
+  border-radius: 5px;
 }
-
 
 

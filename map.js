@@ -118,18 +118,19 @@ const style_cantons = {
 
 const button_canton = $("#Limite_cantonales").click(function(){
 
-	$.getJSON("cantons_votation.geojson", function (data) {
+	$.getJSON("cantons_pop_surface.geojson", function (data) {
 
 		L.geoJSON(data,{style: style_cantons,
 			onEachFeature: function onEachFeature(feature, layer) {
 
-				layer.on('click', function(e){
-					$(".parent1").html('Canton'+' '+':'+' '+ feature.properties.name)});
+				layer.on('click', function(){
+					$(".parent1").html('Canton'+' '+':'+' '+ feature.properties.name)});	// Affichage nom du canton selectionné
 
-				layer.on('click', function(a){
-						$(".parent2").html('Nombre total habitants'+' '+':'+' '+ feature.properties.cantons_Bu)});
-			
-			
+				layer.on('click', function(){
+					$(".parent2").html('Nombre total habitants'+' '+':'+' '+ feature.properties.canton_pop_Population)}); // Affichage du nombre d'habitant dans le canton selectionné
+
+					layer.on('click', function(){
+						$(".parent3").html('Supérficie'+' '+':'+' '+ feature.properties.surface_canton_Surface_total +' '+'km\u00b2')});
 
 		layer.on('mouseover', function () {
 			this.setStyle({
