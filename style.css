@@ -162,6 +162,7 @@ p{
     width: 575px;
     height: 100px;
     text-align: center;
+    font-size: large;
     margin-top: 9px;
     border-radius: 5px;
     color: blanchedalmond;
@@ -170,7 +171,7 @@ p{
 
 .parent1{
   position: absolute;
-  padding-top: 10px;
+  padding-top: 15px;
   background-color: rgb(171, 171, 171);
   width: 555px;
   height: 30px;
@@ -191,20 +192,34 @@ p{
   height: 35px;
   font-size: large;
   text-align:left;
-  margin-top: 30px;
+  margin-top: 40px;
   border:5px;
 }
 
 .parent3{
   position: relative;
   color: blanchedalmond;  
-  padding-top: 10px;
+  padding-top: 20px;
   background-color: rgb(171, 171, 171);
   width: 555px;
   height: 45px;
   font-size: large;
   text-align:left;
   margin-top: -5px;
+  border:5px;
+  border-radius: 5px;
+}
+
+.parent4{
+  position: relative;
+  color: blanchedalmond;  
+  padding-top: 15px;
+  background-color: rgb(171, 171, 171);
+  width: 555px;
+  height: 45px;
+  font-size: large;
+  text-align:left;
+  margin-top: -6px;
   border:5px;
   border-radius: 5px;
 }

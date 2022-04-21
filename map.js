@@ -129,8 +129,12 @@ const button_canton = $("#Limite_cantonales").click(function(){
 				layer.on('click', function(){
 					$(".parent2").html('Nombre total habitants'+' '+':'+' '+ feature.properties.canton_pop_Population)}); // Affichage du nombre d'habitant dans le canton selectionné
 
-					layer.on('click', function(){
-						$(".parent3").html('Supérficie'+' '+':'+' '+ feature.properties.surface_canton_Surface_total +' '+'km\u00b2')});
+				layer.on('click', function(){
+					$(".parent3").html('Supérficie totale'+' '+':'+' '+ feature.properties.surface_canton_Surface_total +' '+'km\u00b2')}); // Affichage de la supérficie totale
+				
+				layer.on('click', function(){
+					$(".parent4").html('Surface naturelle'+' '+':'+' '+ feature.properties.surface_canton_Surfaces_non_naturelles +' '+'km\u00b2')}); // Affichage de la supérficie totale
+					
 
 		layer.on('mouseover', function () {
 			this.setStyle({
