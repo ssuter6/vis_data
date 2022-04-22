@@ -23,7 +23,7 @@ h1 {
     margin: 0px;
 }
 
-h3 {
+h2 {
     color: rgb(77, 128, 41);
     position: relative;
     text-align: center;
@@ -202,7 +202,7 @@ p{
   padding-top: 20px;
   background-color: rgb(171, 171, 171);
   width: 555px;
-  height: 45px;
+  height: 47px;
   font-size: large;
   text-align:left;
   margin-top: -5px;

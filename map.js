@@ -83,14 +83,23 @@ const style_ch = {
 
 const button_ch = $("#Limite_CH").click(function(){								// On va chercher notre boutton et on ouvre une fonction lorsqu'on click dessus
 
-	$.getJSON("ch.geojson", function (data) {									// la fonction va chercher notre données geojson des limites ch et applique une fonction sur ces données
+	$.getJSON("ch2.geojson", function (data) {									// la fonction va chercher notre données geojson des limites ch et applique une fonction sur ces données
 		
 		L.geoJSON(data,{ style: style_ch,  										// On créer une variable qui contient notre nouvelles couche issuent des données geojson
 			onEachFeature: function onEachFeature(feature, layer) { 			// On applique un mouseover au dessus des différents polygone de chaque couche
 
-				layer.on('click', function(e){
-					$("#Nom").html(feature.properties.NAME); 	// On affiche les infos sur l'élément selectionné. 				
-				});
+				layer.on('click', function(){
+					$(".parent1").html('Pays'+' '+':'+' '+ feature.properties.NAME)});	// Affichage nom du canton selectionné
+
+				layer.on('click', function(){
+					$(".parent2").html('Nombre total habitants'+' '+':'+' '+ feature.properties.suisse_population)})
+
+				layer.on('click', function(){
+					$(".parent3").html('Supérficie totale'+' '+':'+' '+ feature.properties.suisse_surface+' '+'hectare')})
+		
+				layer.on('click', function(){
+					$(".parent4").html('Surface de sol non naturelle'+' '+':'+' '+ feature.properties.suisse_surface_naturelle+' '+'hectare')})	
+				
 				layer.on('mouseover', function () {
 					this.setStyle({
 						'fillColor': '#0000ff'
@@ -130,10 +139,10 @@ const button_canton = $("#Limite_cantonales").click(function(){
 					$(".parent2").html('Nombre total habitants'+' '+':'+' '+ feature.properties.canton_pop_Population)}); // Affichage du nombre d'habitant dans le canton selectionné
 
 				layer.on('click', function(){
-					$(".parent3").html('Supérficie totale'+' '+':'+' '+ feature.properties.surface_canton_Surface_total +' '+'km\u00b2')}); // Affichage de la supérficie totale
+					$(".parent3").html('Supérficie totale'+' '+':'+' '+ feature.properties.surface_canton_Surface_total +' '+'hectare')}); // Affichage de la supérficie totale
 				
 				layer.on('click', function(){
-					$(".parent4").html('Surface naturelle'+' '+':'+' '+ feature.properties.surface_canton_Surfaces_non_naturelles +' '+'km\u00b2')}); // Affichage de la supérficie totale
+					$(".parent4").html('Surface de sol non naturelle'+' '+':'+' '+ feature.properties.surface_canton_Surfaces_non_naturelles +' '+'hectare')}); // Affichage de la supérficie totale
 					
 
 		layer.on('mouseover', function () {
@@ -171,10 +180,19 @@ const button_districts = $("#Limite_districts").click(function(){
 
 		L.geoJSON(data, {style: style_districts,
 				onEachFeature: function onEachFeature(feature, layer) {
-					layer.on('click', function(e){
-						$(".name").html(feature.properties.NAME);
-						$(".left").html('Nombre total habitants'+' '+'='+' '+ feature.properties.EINWOHNERZ);
-					});
+
+					layer.on('click', function(){
+						$(".parent1").html('District de'+' '+':'+' '+ feature.properties.NAME)});	// Affichage nom du canton selectionné
+	
+					layer.on('click', function(){
+						$(".parent2").html('Nombre total habitants'+' '+':'+' '+ feature.properties.EINWOHNERZ)}); // Affichage du nombre d'habitant dans le canton selectionné
+	
+					layer.on('click', function(){
+						$(".parent3").html('Supérficie totale'+' '+':'+' '+ feature.properties.district_surface_Surface_totale +' '+'hectare')}); // Affichage de la supérficie totale
+					
+					layer.on('click', function(){
+						$(".parent4").html('Surface de sol non naturelle'+' '+':'+' '+ feature.properties.district_surface_Surface_non_naturelle +' '+'hectare')}); // Affichage de la supérficie totale
+						
 
 					layer.on('mouseover', function () {
 					  this.setStyle({
