@@ -21,6 +21,7 @@ h1 {
     position: relative;
     text-align: center;
     margin: 0px;
+    margin-left: 15%;
 }
 
 h2 {
@@ -28,6 +29,7 @@ h2 {
     position: relative;
     text-align: center;
     margin-top: 5px;
+    margin-left: 15%;
 }
 
 .image{
@@ -158,26 +160,27 @@ p{
   .parent{
     margin-left: 920px;
     position: absolute;
-    background-color: rgb(171, 171, 171);
+    background-color: lightgray;
     width: 575px;
-    height: 100px;
+    height: 300px;
     text-align: center;
     font-size: large;
-    margin-top: 9px;
+    margin-top: 10px;
     border-radius: 5px;
-    color: blanchedalmond;
+    color: rgb(77, 128, 41);
     border:5px;
+    padding: 0px;
 }
 
 .parent1{
   position: absolute;
   padding-top: 15px;
-  background-color: rgb(171, 171, 171);
+  background-color: lightgray;
   width: 555px;
   height: 30px;
   text-align:left;
-  color: blanchedalmond;
-  margin-top: 2px;
+  color: rgb(77, 128, 41);
+  margin-top: 40px;
   font-size: large;
   border-radius: 5px;
   border:5px;
@@ -185,22 +188,22 @@ p{
 
 .parent2{
   position: relative;
-  color: blanchedalmond;  
+  color: rgb(77, 128, 41);  
   padding-top: 25px;
-  background-color: rgb(171, 171, 171);
+  background-color: lightgray;
   width: 555px;
   height: 35px;
   font-size: large;
   text-align:left;
-  margin-top: 40px;
+  margin-top: 80px;
   border:5px;
 }
 
 .parent3{
   position: relative;
-  color: blanchedalmond;  
+  color: rgb(77, 128, 41);  
   padding-top: 20px;
-  background-color: rgb(171, 171, 171);
+  background-color: lightgray;
   width: 555px;
   height: 47px;
   font-size: large;
@@ -212,11 +215,11 @@ p{
 
 .parent4{
   position: relative;
-  color: blanchedalmond;  
+  color: rgb(77, 128, 41);  
   padding-top: 15px;
-  background-color: rgb(171, 171, 171);
+  background-color: lightgray;
   width: 555px;
-  height: 45px;
+  height: 215px;
   font-size: large;
   text-align:left;
   margin-top: -6px;

@@ -188,10 +188,10 @@ const button_districts = $("#Limite_districts").click(function(){
 						$(".parent2").html('Nombre total habitants'+' '+':'+' '+ feature.properties.EINWOHNERZ)}); // Affichage du nombre d'habitant dans le canton selectionné
 	
 					layer.on('click', function(){
-						$(".parent3").html('Supérficie totale'+' '+':'+' '+ feature.properties.district_surface_Surface_totale +' '+'hectare')}); // Affichage de la supérficie totale
+						$(".parent3").html('Supérficie totale'+' '+':'+' '+ feature.properties.district_surface_Surface_totale+' '+'hectare')}); // Affichage de la supérficie totale
 					
 					layer.on('click', function(){
-						$(".parent4").html('Surface de sol non naturelle'+' '+':'+' '+ feature.properties.district_surface_Surface_non_naturelle +' '+'hectare')}); // Affichage de la supérficie totale
+						$(".parent4").html('Surface de sol non naturelle'+' '+':'+' '+ feature.properties.district_surface_Surface_non_naturelle+' '+'hectare')}); // Affichage de la supérficie totale
 						
 
 					layer.on('mouseover', function () {
