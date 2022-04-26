@@ -89,18 +89,19 @@ const button_ch = $("#Limite_CH").click(function(){								// On va chercher not
 			onEachFeature: function onEachFeature(feature, layer) { 			// On applique un mouseover au dessus des différents polygone de chaque couche
 
 				layer.on('click', function(){
-					$(".parent1").html('Pays'+' '+':'+' '+ feature.properties.NAME)});	// Affichage nom du canton selectionné
+					$(".parent1").html('Pays'+' '+':'+' '+ feature.properties.NAME)});	// Affichage nom de la couche selectionnée 
 
 				layer.on('click', function(){
-					$(".parent2").html('Nombre total habitants'+' '+':'+' '+ feature.properties.suisse_population)})
+					$(".parent2").html('Nombre total habitants'+' '+':'+' '+ feature.properties.suisse_population)}) // Affichage du nombre d'habitant en Suisse
 
 				layer.on('click', function(){
-					$(".parent3").html('Supérficie totale'+' '+':'+' '+ feature.properties.suisse_surface+' '+'hectare')})
+					$(".parent3").html('Supérficie totale'+' '+':'+' '+ feature.properties.suisse_surface+' '+'hectare')}) // Affichage de la supérficie de la Suisse
 		
 				layer.on('click', function(){
-					$(".parent4").html('Surface de sol non naturelle'+' '+':'+' '+ feature.properties.suisse_surface_naturelle+' '+'hectare')})	
+					$(".parent4").html('Surface de sol non naturelle'+' '+':'+' '+ feature.properties.suisse_surface_naturelle+' '+'hectare')})	// Affichage de la surface de sol non naturel
 				
-				layer.on('mouseover', function () {
+
+				layer.on('mouseover', function () {	// La couche s'affiche en surbrillance lorsqu'on passe la souris par dessus
 					this.setStyle({
 						'fillColor': '#0000ff'
 					});
@@ -176,22 +177,22 @@ const style_districts = {
 
 const button_districts = $("#Limite_districts").click(function(){
 	
-	$.getJSON("districts.geojson",  function (data) {
+	$.getJSON("districts_surface_habitant3.geojson",  function (data) {
 
 		L.geoJSON(data, {style: style_districts,
 				onEachFeature: function onEachFeature(feature, layer) {
 
 					layer.on('click', function(){
-						$(".parent1").html('District de'+' '+':'+' '+ feature.properties.NAME)});	// Affichage nom du canton selectionné
+						$(".parent1").html('District'+' '+':'+' '+ feature.properties.NAME)});	// Affichage nom du district selectionné
 	
 					layer.on('click', function(){
-						$(".parent2").html('Nombre total habitants'+' '+':'+' '+ feature.properties.EINWOHNERZ)}); // Affichage du nombre d'habitant dans le canton selectionné
+						$(".parent2").html('Nombre total habitants'+' '+':'+' '+ feature.properties.EINWOHNERZ)}); // Affichage du nombre d'habitant dans le district selectionné
 	
 					layer.on('click', function(){
-						$(".parent3").html('Supérficie totale'+' '+':'+' '+ feature.properties.district_surface_Surface_totale+' '+'hectare')}); // Affichage de la supérficie totale
+						$(".parent3").html('Supérficie totale'+' '+':'+' '+ feature.properties.district_surface2_Surface_totale+' '+'hectare')}); // Affichage de la supérficie totale
 					
 					layer.on('click', function(){
-						$(".parent4").html('Surface de sol non naturelle'+' '+':'+' '+ feature.properties.district_surface_Surface_non_naturelle+' '+'hectare')}); // Affichage de la supérficie totale
+						$(".parent4").html('Surface de sol non naturelle'+' '+':'+' '+ feature.properties.district_surface2_Surface_non_nat+' '+'hectare')}); // Affichage de la supérficie totale
 						
 
 					layer.on('mouseover', function () {
@@ -226,13 +227,23 @@ var style_communes = {
 
 const button_communes = $("#Limite_communales").click(function(){
 
-	$.getJSON("communes_p.geojson", function (data) {
+	$.getJSON("communes_surface_hab.geojson", function (data) {
 		L.geoJSON(data, {style: style_communes,
 
 				onEachFeature: function onEachFeature(feature, layer) {
-					layer.on('click', function(e){
-						$(".left").html(feature.properties.NAME);
-					});
+
+					layer.on('click', function(){
+						$(".parent1").html('Commune'+' '+':'+' '+ feature.properties.NAME)});	// Affichage nom de la commune selectionnée
+	
+					layer.on('click', function(){
+						$(".parent2").html('Nombre total habitants'+' '+':'+' '+ feature.properties.EINWOHNERZ)}); // Affichage du nombre d'habitant dans la commune selectionnée
+	
+					layer.on('click', function(){
+						$(".parent3").html('Supérficie totale'+' '+':'+' '+ feature.properties.communes_surface_Surf_tot+' '+'hectare')}); // Affichage de la supérficie totale
+					
+					layer.on('click', function(){
+						$(".parent4").html('Surface de sol non naturelle'+' '+':'+' '+ feature.properties.communes_surface_Surf_non_nat+' '+'hectare')}); // Affichage de la supérficie totale
+						
 
 					layer.on('mouseover', function () {
 					  this.setStyle({

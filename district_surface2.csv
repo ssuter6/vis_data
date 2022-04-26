@@ -1,0 +1,144 @@
+Dist_num;Name;Surface_totale;Surface_non_nat
+101;Bezirk Affoltern;11305;1744
+102;Bezirk Andelfingen;16663;1689
+103;Bezirk Bülach;18489;4087
+104;Bezirk Dielsdorf;15284;2815
+105;Bezirk Hinwil;17942;2831
+106;Bezirk Horgen;10422;2826
+107;Bezirk Meilen;8463;2748
+108;Bezirk Pfäffikon;16312;2108
+109;Bezirk Uster;11220;3170
+110;Bezirk Winterthur;25188;4438
+111;Bezirk Dietikon;6000;1990
+112;Bezirk Zürich;8794;5212
+241;Arrondissement administratif Jura bernois;54169;2919
+242;Verwaltungskreis Biel/Bienne;9749;2447
+243;Verwaltungskreis Seeland;33683;3704
+244;Verwaltungskreis Oberaargau;33104;3884
+245;Verwaltungskreis Emmental;69022;4822
+246;Bern-Mittelland;94363;11395
+247;Verwaltungskreis Thun;32181;3428
+248;Verwaltungskreis Obersimmental-Saanen;57502;1460
+249;Verwaltungskreis Frutigen-Niedersimmental;77340;2341
+250;Verwaltungskreis Interlaken-Oberhasli;122924;2770
+311;Wahlkreis Luzern-Stadt;2908;1321
+312;Wahlkreis Luzern-Land;18753;2929
+313;Wahlkreis Hochdorf;17742;2519
+314;Wahlkreis Sursee;27310;3118
+315;Wahlkreis Willisau;33743;2764
+316;Wahlkreis Entlebuch;42446;1422
+400;Kanton Uri;105721;1868
+501;Bezirk Einsiedeln;9903;588
+502;Bezirk Gersau;1436;92
+503;Bezirk Höfe;3765;830
+504;Bezirk Küssnacht (SZ);2948;453
+505;Bezirk March;17683;1282
+506;Bezirk Schwyz;49435;2060
+600;Kanton Obwalden;48070;1779
+700;Kanton Nidwalden;24139;1417
+800;Kanton Glarus;68070;1836
+900;Kanton Zug;20709;3078
+1001;District de la Broye;17250;1785
+1002;La Glâne;16878;1291
+1003;District de la Gruyère;48976;2488
+1004;District de la Sarine;21773;3126
+1005;Bezirk See / District du Lac;14472;1749
+1006;Bezirk Sense;26549;2062
+1007;District de la Veveyse;13436;906
+1101;Bezirk Gäu;6197;993
+1102;Bezirk Thal;13939;776
+1103;Bezirk Bucheggberg;6276;512
+1104;Bezirk Dorneck;7464;840
+1105;Bezirk Gösgen;6869;922
+1106;Bezirk Wasseramt;7659;1886
+1107;Bezirk Lebern;11724;1634
+1108;Bezirk Olten;8057;1855
+1109;Bezirk Solothurn;627;434
+1110;Bezirk Thierstein;10227;703
+1200;Kanton Basel-Stadt;3697;2513
+1301;Bezirk Arlesheim;9619;3778
+1302;Bezirk Laufen;8955;877
+1303;Bezirk Liestal;8596;1825
+1304;Bezirk Sissach;14104;1424
+1305;Bezirk Waldenburg;10501;724
+1401;Bezirk Oberklettgau;3192;237
+1402;Bezirk Reiat;3933;444
+1403;Bezirk Schaffhausen;10580;1567
+1404;Bezirk Schleitheim;4354;242
+1405;Bezirk Stein;3096;298
+1406;Bezirk Unterklettgau;4663;376
+1501;Bezirk Hinterland;13618;930
+1502;Bezirk Mittelland;6029;665
+1503;Bezirk Vorderland;4644;553
+1600;Kanton Appenzell Innerrhoden;17236;784
+1721;Wahlkreis St. Gallen;15765;3213
+1722;Wahlkreis Rorschach;5045;1422
+1723;Wahlkreis Rheintal;13903;2880
+1724;Wahlkreis Werdenberg;20649;1778
+1725;Wahlkreis Sarganserland;51776;1937
+1726;Wahlkreis See-Gaster;24574;2349
+1727;Wahlkreis Toggenburg;48848;2484
+1728;Wahlkreis Wil;14538;2511
+1841;Bezirk Albula;68361;961
+1842;Distretto di Bernina;23734;405
+1843;Bezirk Engiadina Bassa / Val Müstair;119663;899
+1844;Bezirk Imboden;20376;882
+1845;Bezirk Landquart;17466;1052
+1846;Bezirk Maloja;97343;1299
+1847;Distretto di Moesa;49608;768
+1848;Bezirk Plessur;28528;1244
+1849;Bezirk Prättigau / Davos;85333;1643
+1850;Bezirk Surselva;137341;2004
+1851;Bezirk Viamala;62764;1043
+1901;Bezirk Aarau;10471;2297
+1902;Bezirk Baden;15329;3626
+1903;Bezirk Bremgarten;11753;2327
+1904;Bezirk Brugg;14503;2076
+1905;Bezirk Kulm;9728;1564
+1906;Bezirk Laufenburg;15673;1642
+1907;Bezirk Lenzburg;9794;2182
+1908;Bezirk Muri;13895;1544
+1909;Bezirk Rheinfelden;11174;1596
+1910;Bezirk Zofingen;14200;2523
+1911;Bezirk Zurzach;12996;1595
+2011;Bezirk Arbon;8890;2026
+2012;Bezirk Frauenfeld;27958;3255
+2013;Bezirk Kreuzlingen;12918;2020
+2014;Bezirk Münchwilen;13815;1899
+2015;Bezirk Weinfelden;22706;2825
+2101;Distretto di Bellinzona;22642;2042
+2102;Distretto di Blenio;36072;540
+2103;Distretto di Leventina;47939;1116
+2104;Distretto di Locarno;55044;2787
+2105;Distretto di Lugano;30805;4605
+2106;Distretto di Mendrisio;10081;1898
+2107;Distretto di Riviera;14569;552
+2108;Distretto di Vallemaggia;56937;579
+2221;District d'Aigle;43506;2704
+2222;District de la Broye-Vully;25812;2500
+2223;District du Gros-de-Vaud;23229;1960
+2224;District du Jura-Nord vaudois;70104;4360
+2225;District de Lausanne;6509;2576
+2226;District de Lavaux-Oron;14016;2132
+2227;District de Morges;37305;3410
+2228;District de Nyon;30741;3650
+2229;District de l'Ouest lausannois;2629;1517
+2230;District de la Riviera-Pays-d'Enhaut;28286;2512
+2301;Bezirk Brig;43446;978
+2302;District de Conthey;23416;1442
+2303;District d'Entremont;63305;1122
+2304;Bezirk Goms;58923;548
+2305;District d'Hérens;46599;868
+2306;Bezirk Leuk;33522;897
+2307;District de Martigny;26353;2073
+2308;District de Monthey;25671;1960
+2309;Bezirk Raron;39823;833
+2310;District de Saint-Maurice;19056;785
+2311;District de Sierre;41844;2425
+2312;District de Sion;13054;1671
+2313;Bezirk Visp;86412;1372
+2400;Canton de Neuchâtel;71674;6014
+2500;Canton de Genève;24576;8943
+2601;District de Delémont;30320;2057
+2602;District des Franches-Montagnes;20018;820
+2603;District de Porrentruy;33519;2179
