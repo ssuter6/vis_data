@@ -30,14 +30,15 @@ De plus, dans l'objectif d'apporter une série d'informations supplémentaires a
 
 
 
+
 ## Création de l'interface du projet 
 
 Dès lors que les éléments de fonds de carte et d'habillages ont été définis. Nous avons créer un interface qui permet d'interagir avec la carte et les données Geojson que nous avons créé. Cet interface se décompose en plusieurs parties. A savoir, une carte interactive qui permet de visualiser nos limites administratives de la Suisse, une partie permettant à l'utilisateur de selectionner quelles limites ce dernier souhaite visualiser. Et finalement, une partie permettant d'apporter des informations sur l'interactivité du projet et qui permet également de faire figurer les informations quantitatives des divers variables que nous avons retenus pour ce projet.
-![projet_vis_data](https://user-images.githubusercontent.com/81638170/148364214-4c2a3c3d-bceb-47ba-adf3-a30cdc6fbd8f.JPG)
+![projet1](https://user-images.githubusercontent.com/81638170/165460763-d2d90675-0c44-4d70-a582-3983bee7cce6.png)
 
 
 ### Interactivité 
 
-L'utilisateur peut dès lors selectionner un type de limites administrative qu'il souhaite visualiser en cliquant sur l'élément souhaité en dessous de la carte. Cette fonction permet en effet d'afficher les limites sur la carte. De plus une fois que les limites sont affichées, l'utilisateur peut ensuite passer la souris en dessus de la carte ce qui met en évidence l'élement survolé. Finalement, lorsque l'on clique sur une des limites de la carte, le nom de cette dernière s'afficher dans la parie de droite pour apporter des éléments sur le nom et le nombre d'habitants figurant dans cette zone administrative. 
-![exempe](https://user-images.githubusercontent.com/81638170/148365150-1a70f6ec-9fb6-4a8b-981a-9e145db0e475.JPG)
+L'utilisateur peut dès lors selectionner un type de limites administrative qu'il souhaite visualiser en cliquant sur l'élément souhaité en dessous de la carte. Cette fonction permet en effet d'afficher les limites sur la carte. De plus une fois que les limites sont affichées, l'utilisateur peut ensuite passer la souris en dessus de la carte ce qui met en évidence l'élement survolé. Finalement, lorsque l'utilisateur clique sur une des limites de la carte, les informations associées à cette dernière s'affichent dans l'encadrer prévu à cet effet.
+![projet2](https://user-images.githubusercontent.com/81638170/165460877-5d742ddc-8065-47eb-a532-fdf015bbc36b.png)
 
