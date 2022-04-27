@@ -32,7 +32,7 @@ De plus, dans l'objectif d'apporter une série d'informations supplémentaires a
 
 ## Création de l'interface du projet 
 
-Dès lors que les éléments de fonds de carte et d'habillages ont été définis. Nous avons créer un interface qui permet d'interagir avec la carte et les données Geojson que nous avons créer. Cet interface se décompose en plusieurs parties. A savoir, une carte interactive qui permet de visualiser nos limites administratives de la Suisse, une partie permettant à l'utilisateur de selectionner quelles limites ce dernier souhaite visualiser. Et finalement, une partie permettant d'apporter des informations sur l'interactivité du projet et sur les éléments que l'utilisateur à choisi de selectionner.
+Dès lors que les éléments de fonds de carte et d'habillages ont été définis. Nous avons créer un interface qui permet d'interagir avec la carte et les données Geojson que nous avons créé. Cet interface se décompose en plusieurs parties. A savoir, une carte interactive qui permet de visualiser nos limites administratives de la Suisse, une partie permettant à l'utilisateur de selectionner quelles limites ce dernier souhaite visualiser. Et finalement, une partie permettant d'apporter des informations sur l'interactivité du projet et qui permet également de faire figurer les informations quantitatives des divers variables que nous avons retenus pour ce projet.
 ![projet_vis_data](https://user-images.githubusercontent.com/81638170/148364214-4c2a3c3d-bceb-47ba-adf3-a30cdc6fbd8f.JPG)
 
 
