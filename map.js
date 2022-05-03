@@ -14,27 +14,14 @@ let myMap = L.map('map', {
 });
 
 // Ajout de nos couches de base (layers)
-
-const ESRI = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
-	attribution: 'Tiles &copy; Esri and the GIS User Community'
-})
-
-
 const osmLayer = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
   	attribution: '&copy; OpenStreetMap contributors'
 });
 
 
-
 const googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
   	tileSize: 256,
   	subdomains:['mt0','mt1','mt2','mt3']
-});
-
-
-const test = L.tileLayer('file:///C%3A/Users/Steven/Desktop/Master/sentinel_2/04_avril_2021/{z}/{x}/{y}.png', {
-  	attribution: '&copy; OpenStreetMap contributors',
-	  tms: false,
 });
 
 
@@ -46,6 +33,7 @@ const terrain = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain-b
 	ext: 'png'
 });
 
+
 var swissLayer = L.tileLayer.swiss()
 
 
@@ -56,11 +44,9 @@ terrain.addTo(myMap);
 const controlLayers = L.control.layers().addTo(myMap);
 
 // Ajout des couches de bases au controller
-controlLayers.addBaseLayer(ESRI, 'ESRI');
 controlLayers.addBaseLayer(osmLayer, 'OpenStreeMap');
 controlLayers.addBaseLayer(googleSat, 'Satellite');
 controlLayers.addBaseLayer(terrain, 'Terrain');
-controlLayers.addBaseLayer(test, 'Test');
 
 
 // Ajout de l'échelle à la carte
@@ -69,12 +55,13 @@ L.control.scale({
 }).addTo(myMap);
 
 
-/////////////////////////////////////////////////////////////////////////////////////
-//	Chargement des donéées geojson à l'aide de JQuery
-// 	Chaque gichier geojson peut être chargé à la carte en appuyant sur le boutton voulu
-//////////////////////////////////////////////////////////////////////////////////////
+					/////////////////////////////////////////////////////////////////////////////////////
+					//	Chargement des donées geojson à l'aide de JQuery
+					// 	Chaque fichier geojson peut être chargé à la carte en appuyant sur le boutton voulu
+					//////////////////////////////////////////////////////////////////////////////////////
+					
 
-/// Suisse ///
+/////////////////////////////////////////////////////////////// Suisse //////////////////////////////////////////////////////////////////////////////////
 const style_ch = {
 	"color": "#800000",
 	"weight": 4,
@@ -83,7 +70,7 @@ const style_ch = {
 
 const button_ch = $("#Limite_CH").click(function(){								// On va chercher notre boutton et on ouvre une fonction lorsqu'on click dessus
 
-	$.getJSON("ch2.geojson", function (data) {									// la fonction va chercher notre données geojson des limites ch et applique une fonction sur ces données
+	$.getJSON("Suisse.geojson", function (data) {									// la fonction va chercher notre données geojson des limites ch et applique une fonction sur ces données
 		
 		L.geoJSON(data,{ style: style_ch,  										// On créer une variable qui contient notre nouvelles couche issuent des données geojson
 			onEachFeature: function onEachFeature(feature, layer) { 			// On applique un mouseover au dessus des différents polygone de chaque couche
@@ -109,7 +96,7 @@ const button_ch = $("#Limite_CH").click(function(){								// On va chercher not
 						'fillColor': '#0000ff'
 					});
 				});
-				layer.on('mouseout', function () {
+				layer.on('mouseout', function () {  // La couche redevient normale lorsque la souris n'est plus dessus
 					  this.setStyle({
 						'fillColor': 'rgba(255, 255, 255, 0.5)'
 					});
@@ -132,7 +119,7 @@ const style_cantons = {
 
 const button_canton = $("#Limite_cantonales").click(function(){
 
-	$.getJSON("cantons_pop_surface.geojson", function (data) {
+	$.getJSON("Cantons.geojson", function (data) {
 
 		L.geoJSON(data,{style: style_cantons,
 			onEachFeature: function onEachFeature(feature, layer) {
@@ -182,7 +169,7 @@ const style_districts = {
 
 const button_districts = $("#Limite_districts").click(function(){
 
-	$.getJSON("districts_final84.geojson",  function (data) {
+	$.getJSON("Districts.geojson",  function (data) {
 
 		L.geoJSON(data, {style: style_districts,
 				onEachFeature: function onEachFeature(feature, layer) {
@@ -232,7 +219,7 @@ var style_communes = {
 
 const button_communes = $("#Limite_communales").click(function(){
 
-	$.getJSON("communes_surface_hab_3.geojson", function (data) {
+	$.getJSON("Communes.geojson", function (data) {
 		L.geoJSON(data, {style: style_communes,
 
 				onEachFeature: function onEachFeature(feature, layer) {
