@@ -92,20 +92,18 @@ const button_ch = $("#Limite_CH").click(function(){								// On va chercher not
 					$(".parent0").html(feature.properties.img)});				// On affiche le drapeau CH
 
 				layer.on('click', function(){
-					$(".parent1").html('Pays'+' '+':'+' '+ feature.properties.NAME)});	// Affichage nom de la couche selectionnée 
+					$(".parent1").html('<b>Pays</b>'+' '+':'+' '+ feature.properties.NAME)});	// Affichage nom de la couche selectionnée 
 
 				layer.on('click', function(){
-					$(".parent2").html('Nombre total habitants'+' '+':'+' '+ feature.properties.suisse_population)}) // Affichage du nombre d'habitant en Suisse
+					$(".parent2").html('<b>Nombre total habitants</b>'+' '+':'+' '+ feature.properties.suisse_population)}) // Affichage du nombre d'habitant en Suisse
 
 				layer.on('click', function(){
-					$(".parent3").html('Supérficie totale'+' '+':'+' '+ feature.properties.suisse_surface+' '+'hectare')}) // Affichage de la supérficie de la Suisse
+					$(".parent3").html('<b>Supérficie totale</b>'+' '+':'+' '+ feature.properties.suisse_surface+' '+'hectare')}) // Affichage de la supérficie de la Suisse
 		
 				layer.on('click', function(){
-					$(".parent4").html('Surface de sol non naturelle'+' '+':'+' '+ feature.properties.suisse_surface_naturelle+' '+'hectare')})	// Affichage de la surface de sol non naturel
+					$(".parent4").html('<b>Surface de sol non naturelle</b>'+' '+':'+' '+ feature.properties.suisse_surface_naturelle+' '+'hectare')})	// Affichage de la surface de sol non naturel
 				
-
-					
-
+				
 				layer.on('mouseover', function () {	// La couche s'affiche en surbrillance lorsqu'on passe la souris par dessus
 					this.setStyle({
 						'fillColor': '#0000ff'
@@ -119,11 +117,12 @@ const button_ch = $("#Limite_CH").click(function(){								// On va chercher not
 				layer.bindPopup('<strong>' + feature.properties.NAME ); 	// Lorsqu'on click sur le polygon le nom de ce dernier s'affiche
 			}
 		}).addTo(myMap);
-
 	});
 });
 
-/// Cantons ///
+
+
+////////////////////////////////////////////////////////////////////////// Cantons ///////////////////////////////////////////////////////////////////////////
 const style_cantons = {
 	"color": "#000075",
 	"weight": 3,
@@ -167,15 +166,13 @@ const button_canton = $("#Limite_cantonales").click(function(){
 		});
 
 		layer.bindPopup('<strong>' + feature.properties.name);
-
 		}
-		}).addTo(myMap);
-				
+		}).addTo(myMap);			
 	});
 });
 
 
-/// Districts//
+///////////////////////////////////////////////////////////// Districts//////////////////////////////////////////////////////////////////////////////////
 const style_districts = {
 	"color": "#e6194B",
 	"weight": 2,
@@ -197,13 +194,13 @@ const button_districts = $("#Limite_districts").click(function(){
 						$(".parent1").html('<b>District</b>'+' '+':'+' '+ feature.properties.NAME)});	// Affichage nom du district selectionné
 	
 					layer.on('click', function(){
-						$(".parent2").html('<b>Nombre total habitants</b>'+' '+':'+' '+ feature.properties.EINWOHNERZ)}); // Affichage du nombre d'habitant dans le district selectionné
+						$(".parent2").html('<b>Nombre total habitants</b>'+' '+':'+' '+ feature.properties.EINWOHNERZ)}); // Affichage du nombre d'habitants dans le district selectionné
 	
 					layer.on('click', function(){
 						$(".parent3").html('<b>Supérficie totale</b>'+' '+':'+' '+ feature.properties.district_1+' '+'hectare')}); // Affichage de la supérficie totale
 					
 					layer.on('click', function(){
-						$(".parent4").html('<b>Surface de sol non naturelle</b>'+' '+':'+' '+ feature.properties.district_2+' '+'hectare')}); // Affichage de la supérficie totale
+						$(".parent4").html('<b>Surface de sol non naturelle</b>'+' '+':'+' '+ feature.properties.district_2+' '+'hectare')}); // Affichage de la supérficie totale de sol non naturel
 						
 
 					layer.on('mouseover', function () {
@@ -219,16 +216,13 @@ const button_districts = $("#Limite_districts").click(function(){
 					});
 
 					layer.bindPopup('<strong>' + feature.properties.NAME );
-				
 				}
-
 		}).addTo(myMap);
-
 	});
 });
 
 
-/// Communes ///
+////////////////////////////////////////////////////////////////////// Communes //////////////////////////////////////////////////////////////////////////////////
 var style_communes = {
 	"color": "#000000",
 	"weight": 0.6,
@@ -273,8 +267,7 @@ const button_communes = $("#Limite_communales").click(function(){
 
 					layer.bindPopup('<strong>' + feature.properties.NAME );
 				}
-		}).addTo(myMap);
-			
+		}).addTo(myMap);			
 	});
 });
 
