@@ -172,43 +172,59 @@ p{
     padding: 0px;
 }
 
+.parent0{
+  position: relative;
+  color: rgb(77, 128, 41);  
+  padding-top: 0px;
+  background-color: lightgray;
+  width: 355px;
+  height: 180px;
+  margin-left:  200px;  
+  display: block;
+  font-size: large;
+  text-align:left;
+  border:5px;
+  border-radius: 5px;
+}
+
 .parent1{
-  position: absolute;
-  padding-top: 15px;
+  position: relative;
+  color: rgb(77, 128, 41);  
+  padding-top: 30px;
   background-color: lightgray;
   width: 555px;
-  height: 30px;
-  text-align:left;
-  color: rgb(77, 128, 41);
-  margin-top: 40px;
+  height: 60px;
   font-size: large;
-  border-radius: 5px;
+  text-align:left;
+  margin-top: -6px;
   border:5px;
+  border-radius: 5px;
 }
 
 .parent2{
   position: relative;
   color: rgb(77, 128, 41);  
-  padding-top: 25px;
+  padding-top: 0px;
   background-color: lightgray;
   width: 555px;
-  height: 35px;
+  height: 60px;
   font-size: large;
   text-align:left;
-  margin-top: 80px;
+  margin-top: -6px;
   border:5px;
+  border-radius: 5px;
 }
 
 .parent3{
   position: relative;
   color: rgb(77, 128, 41);  
-  padding-top: 20px;
+  padding-top: 0px;
   background-color: lightgray;
   width: 555px;
-  height: 47px;
+  height: 60px;
   font-size: large;
   text-align:left;
-  margin-top: -5px;
+  margin-top: -6px;
   border:5px;
   border-radius: 5px;
 }
@@ -216,10 +232,10 @@ p{
 .parent4{
   position: relative;
   color: rgb(77, 128, 41);  
-  padding-top: 15px;
+  padding-top: 0px;
   background-color: lightgray;
   width: 555px;
-  height: 215px;
+  height: 60px;
   font-size: large;
   text-align:left;
   margin-top: -6px;
