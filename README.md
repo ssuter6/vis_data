@@ -40,5 +40,6 @@ Dès lors que les éléments de fonds de carte et d'habillages ont été défini
 ### Interactivité 
 
 L'utilisateur peut dès lors selectionner un type de limites administrative qu'il souhaite visualiser en cliquant sur l'élément souhaité en dessous de la carte. Cette fonction permet en effet d'afficher les limites sur la carte. De plus une fois que les limites sont affichées, l'utilisateur peut ensuite passer la souris en dessus de la carte ce qui met en évidence l'élément survolé. Finalement, lorsque l'utilisateur clique sur une des limites de la carte, les informations associées à cette dernière s'affichent dans l'encadrer prévu à cet effet.
-![projet2](https://user-images.githubusercontent.com/81638170/165460877-5d742ddc-8065-47eb-a532-fdf015bbc36b.png)
+![projet_3](https://user-images.githubusercontent.com/81638170/166636793-3c9251fc-696b-44b8-8148-9fe925aba33c.png)
+
 
