@@ -39,8 +39,13 @@ De plus, dans l'objectif d'apporter une série d'informations supplémentaires a
 
 Dès lors que les éléments de fonds de carte et d'habillages ont été définis. Nous avons créer un interface qui permet d'interagir avec la carte et les données Geojson que nous avons créer. Cet interface se décompose dès lors en trois parties. A savoir, une carte interactive qui permet de visualiser nos limites administratives de la Suisse, une partie permettant à l'utilisateur de selectionner quelles limites ce dernier souhaite visualiser. Et finalement, une partie permettant d'apporter des informations sur l'interactivité du projet et qui permet également de faire figurer les informations quantitatives des divers variables que nous avons retenus pour ce projet.
 
-![projet1](https://user-images.githubusercontent.com/81638170/165460763-d2d90675-0c44-4d70-a582-3983bee7cce6.png)
+![finalement](https://user-images.githubusercontent.com/81638170/171653537-f5366db8-d88b-424d-a8eb-9293b7637397.png)
 
+![finalement 2](https://user-images.githubusercontent.com/81638170/171653587-266fed85-43cd-465f-82d6-4406b594bb74.png)
+
+![finalement 3](https://user-images.githubusercontent.com/81638170/171653622-406f9010-3d60-490e-ade5-ab702acd9c68.png)
+
+![finalement 4](https://user-images.githubusercontent.com/81638170/171653648-c0d17ee8-7a11-42ff-a192-446dbfbc81ef.png)
 
 
 ### Interactivité 
@@ -48,5 +53,19 @@ Dès lors que les éléments de fonds de carte et d'habillages ont été défini
 L'utilisateur peut dès lors selectionner un type de limites administrative qu'il souhaite visualiser en cliquant sur l'élément souhaité en dessous de la carte. Cette fonction permet en effet d'afficher les limites sur la carte. De plus une fois que les limites sont affichées, l'utilisateur peut ensuite passer la souris en dessus de la carte ce qui met en évidence l'élément survolé. Finalement, lorsque l'utilisateur clique sur une des limites de la carte, les informations associées à cette dernière s'affichent dans l'encadrer prévu à cet effet.
 
 ![projet_3](https://user-images.githubusercontent.com/81638170/166636793-3c9251fc-696b-44b8-8148-9fe925aba33c.png)
+
+
+
+### Visualisation du project 
+
+L'accès à la visualisation de ce projet doit ce faire au travers d'un serveur local. Plusieurs façons permettent de le faire mais l'une des plus évidente est de travailler à partir de l'éditeur de code **Visual Studio Code**. Un éditeur développé par Microsoft pour Windows, Linux et macOS. Une fois que cet éditeur est installé sur notre ordinateur, il suffit de: 
+
+  1. Télecharger le ficher ZIP du projet et extraire ce dernier dans un dosser de son choix.
+  2. Ouvrir le dossier principal que nous venons d'extraire (vis_data-main) dans Visual Code Studio.
+  3. Faire un click droit sur _index.html_ et selectionner _"Open with live server"_. Dès lors il est possible de visualiser le projet.
+
+
+
+
 
 
