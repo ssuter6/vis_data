@@ -56,7 +56,8 @@ L'utilisateur peut dès lors selectionner un type de limites administrative qu'i
 
 
 
-### Visualisation du project 
+
+### Visualisation du project avec **Visual Studio Code**
 
 L'accès à la visualisation de ce projet doit ce faire au travers d'un serveur local. Plusieurs façons permettent de le faire mais l'une des plus évidente est de travailler à partir de l'éditeur de code **Visual Studio Code**. Un éditeur développé par Microsoft pour Windows, Linux et macOS. Une fois que cet éditeur est installé sur notre ordinateur, il suffit de: 
 
