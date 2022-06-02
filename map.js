@@ -8,7 +8,7 @@ let myMap = L.map('map', {
 	
 	// Gestion des parametres
 	center: [46.83, 8.2],
-	minZoom: 1,
+	minZoom: 8,
 	maxZoom: 10.3,
 	zoom: 7.5,  
 });
