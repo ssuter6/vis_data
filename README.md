@@ -14,7 +14,7 @@ Le projet a été réaliser en grande partie sur la base de langage Javascript a
 De plus, l'ensemble des données que nous avons utilisées pour ce travail ont été traiter à partir de divers fichiers GeoJson qui ont été créer spécifiquement pour ce projet. Ces derniers ont pu être réalisé à partir d'un système d'information géographique (SIG) et dans notre cas nous avons fait recours à un logiciel open source, à savoir QGIS. Nous pouvons encore noter qu'un fichier GeoJson représente ainsi un format ouvert d'encodage d'ensemble de données géospatiales utilisant la norme JSON. Ces derniers permettent ainsi de décrire des données spatiales sous la forme de lignes, de points ou encore de polygones. Il est dès lors possible d'associer d'autres variables à ces ensembles de données, qui ne représentent cette fois pas de données spatiales.
 
 
-## Création du porjet
+## Création du projet
 
 ### Fond de carte: 
 
