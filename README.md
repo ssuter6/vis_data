@@ -58,13 +58,13 @@ Une fois les éléments de fond de carte et d'habillages définis, nous avons cr
 ### Interactivité 
 Il est dès lors possible de sélectionner un type de limite administrative à visualiser en cliquant sur l'élément souhaité en dessous de la carte. Cette fonction permet d'afficher les limites sur la carte, mises en évidence au survol de la souris. Un clic sur une zone affiche le nombre d'habitants figurant dans cette zone administrative dans l'encadré prévu à cette effet.
 
-![finalement](https://user-images.githubusercontent.com/81638170/171653537-f5366db8-d88b-424d-a8eb-9293b7637397.png)
+![page2](https://user-images.githubusercontent.com/81638170/172373761-260e469e-24e0-4990-92c5-6cbcd80701b3.png)
 
-![finalement 2](https://user-images.githubusercontent.com/81638170/171653587-266fed85-43cd-465f-82d6-4406b594bb74.png)
+![page3](https://user-images.githubusercontent.com/81638170/172373792-18becd89-ff24-4a59-9cac-d9012cbda7cd.png)
 
-![finalement 3](https://user-images.githubusercontent.com/81638170/171653622-406f9010-3d60-490e-ade5-ab702acd9c68.png)
+![page4](https://user-images.githubusercontent.com/81638170/172373822-74f92c0b-8442-4ba8-9ddd-6f0788fb2925.png)
 
-![finalement 4](https://user-images.githubusercontent.com/81638170/171653648-c0d17ee8-7a11-42ff-a192-446dbfbc81ef.png)
+![page5](https://user-images.githubusercontent.com/81638170/172373831-31c38097-79cf-423e-a3f1-91344f8a2024.png)
 
 
 
