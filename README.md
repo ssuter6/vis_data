@@ -52,7 +52,7 @@ Une fois les éléments de fond de carte et d'habillages définis, nous avons cr
 -  une zone textuelle où s'inscriront les informations relatives aux divers limites administratives.
 -  un graphique permettant d'afficher la taille de la population de chacun des cantons de la Suisse
 
-![finalement 5](https://user-images.githubusercontent.com/81638170/171654239-f0afaf79-6edb-41c1-af8f-107a4a52b3de.png)
+![Page1](https://user-images.githubusercontent.com/81638170/172373243-16aac99f-0d73-433a-8240-ba34d90b2c27.png)
 
 
 ### Interactivité 
