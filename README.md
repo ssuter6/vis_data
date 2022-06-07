@@ -10,8 +10,11 @@ admnistratives qui prennent place à l'échelle de la Suisse. A savoir les limit
 ## Librairies utilisées et environnement de travail
 
 Le projet a été réaliser en grande partie sur la base de langage Javascript associé à du HTML ainsi que du CSS pour les éléments de style. Nous pouvons noter que dans le cadre de ce travail, nous avons principalement utilisé les librairies de Leaflet, D3 ainsi que JQuery. Trois librairies utilisant le langage Javascript, qui permettent de faciliter le traitement de données (dans notre cas géographiques).
+
 __JQuery__ est une librairie JavaScript gratuite multiplatforme qui facilite l'écriture de scripts. Elle permet entre autre la manipulation du Document Object Model (DOM). 
+
 __Leaflet__ est pour ça part, une librairie gratuite JavaScript, utilisée dans le cadre de cartographie web.
+
 __D3__ est librairie JavaScript permet de traiter des données de manière très aisée et facilite grandement leur visualisation. Elle permet notamment l'affichage de données numériques sous une forme graphique. 
 
 A côté de ces deux librairies principales, l'ensemble des données que nous avons utilisées pour ce travail ont été traitées à partir de divers fichiers GeoJson qui ont été créer spécifiquement pour ce projet. Ces derniers ont pu être réalisé à partir d'un système d'information géographique (SIG). Dans notre cas nous avons fait recours à un logiciel open source, à savoir __QGIS__. 
