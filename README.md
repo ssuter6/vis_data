@@ -40,18 +40,17 @@ Une fois le fond de carte créé, nous avons pu  ajouter nos éléments d'habill
 
 Par ailleur, dans l'objectif d'apporter une série d'informations supplémentaires autres que les simples limites admnistratives de la Suisse à ce projet. Il a été décidé d'associer un certains nombre de variables quantitatives aux divers fichiers GeoJson que nous avons créé. Ces  variables concernent ainsi la taille de populations de chacune des limites administratives, leurs supérficie totale ainsi que la superficie de leurs surface de sol non naturel. Ces informations ont été collecter sur le site de l'office fédérale de la statistique, à savoir: [Stat-tab](https://www.bfs.admin.ch/bfs/fr/home/services/recherche/stat-tab-donnees-interactives.html). Une fois associée aux fichiers GeoJson, ces informations peuvent être affichées dans l'interface de notre projet.
 
-Finalement, nous avons également décidé de réaliser un graphique figurant en-dessous de la zone d'information, dans le but d'apporter une autre forme de visualisation à nos variables. Ce graphique (prenant la forme d'un histogramme), permet ainsi de visualiser la population vivant dans chacun des cantons Suisse. Pour réaliser ce dernier, nous avons fait recours à la librairie D3, qui nous a permis de lier nos données à un DOM pour en créer un graphique.
-
-![Capture](https://user-images.githubusercontent.com/81638170/148370274-8191f090-0941-41e3-8424-cbe41a640f4b.JPG) 
+Finalement, nous avons également décidé de réaliser un graphique figurant en-dessous de la zone d'information, dans le but d'apporter une autre forme de visualisation à nos variables. Ce graphique (prenant la forme d'un histogramme), permet ainsi de visualiser la population vivant dans chacun des cantons Suisse. Pour réaliser ce dernier, nous avons fait recours à la librairie D3, qui nous a permis de lier nos données à un DOM pour en créer un graphique. 
 
 
 ### Création de l'interface du projet 
 
-Une fois les éléments de fond de carte et d'habillages définis, nous avons créé une interface d'interaction avec la carte et les données Geojson. Cette interface se décompose en trois parties :
+Une fois les éléments de fond de carte et d'habillages définis, nous avons créé une interface d'interaction avec la carte et les données Geojson. Cette interface se décompose en quatre parties :
 
 -  une carte interactive qui permet de visualiser nos limites administratives de la Suisse,	
 -  une liste de boutons permettant de sélectionner les limites à afficher,
 -  une zone textuelle où s'inscriront les informations relatives aux divers limites administratives.
+-  un graphique permettant d'afficher la taille de la population de chacun des cantons de la Suisse
 
 ![finalement 5](https://user-images.githubusercontent.com/81638170/171654239-f0afaf79-6edb-41c1-af8f-107a4a52b3de.png)
 
