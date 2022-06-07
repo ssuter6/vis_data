@@ -11,11 +11,11 @@ admnistratives qui prennent place à l'échelle de la Suisse. A savoir les limit
 
 Le projet a été réaliser en grande partie sur la base de langage Javascript associé à du HTML ainsi que du CSS pour les éléments de style. Nous pouvons noter que dans le cadre de ce travail, nous avons principalement utilisé les librairies de Leaflet, D3 ainsi que JQuery. Trois librairies utilisant le langage Javascript, qui permettent de faciliter le traitement de données (dans notre cas géographiques).
 
-__JQuery__ est une librairie JavaScript gratuite multiplatforme qui facilite l'écriture de scripts. Elle permet entre autre la manipulation du Document Object Model (DOM). 
+__JQuery__ est une librairie JavaScript gratuite multiplatforme qui facilite l'écriture de scripts. Elle permet entre autre la manipulation de Document Object Model (DOM). 
 
 __Leaflet__ est pour ça part, une librairie gratuite JavaScript, utilisée dans le cadre de cartographie web.
 
-__D3__ est librairie JavaScript permet de traiter des données de manière très aisée et facilite grandement leur visualisation. Elle permet notamment l'affichage de données numériques sous une forme graphique. 
+__D3__ est librairie JavaScript qui permet de traiter des données de manière très aisée et facilite grandement leur visualisation. Une des grandes forces de cette librairie est qu'elle permet de lier des données directement à un DOM.
 
 A côté de ces deux librairies principales, l'ensemble des données que nous avons utilisées pour ce travail ont été traitées à partir de divers fichiers GeoJson qui ont été créer spécifiquement pour ce projet. Ces derniers ont pu être réalisé à partir d'un système d'information géographique (SIG). Dans notre cas nous avons fait recours à un logiciel open source, à savoir __QGIS__. 
 Un fichier GeoJson représente ainsi un format ouvert d'encodage d'ensemble de données géospatiales utilisant la norme JSON. Ces derniers permettent ainsi de décrire des données spatiales sous la forme de lignes, de points ou encore de polygones. Il est dès lors possible d'associer d'autres variables à ces ensembles de données, qui ne représentent cette fois pas de données spatiales.
